@@ -1,97 +1,109 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# MyNotificationsApp
 
-# Getting Started
+Simulador de sistema de notificaciones push para React Native
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 ¿Qué es este proyecto?
+Una app de ejemplo para un challenge técnico que simula la recepción, listado y detalle de notificaciones push, con distinción de leídas/no leídas, filtros, persistencia y arquitectura profesional.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 📦 Requisitos previos
+- Node.js >= 16
+- Yarn o npm
+- React Native CLI
+- Xcode (para iOS)
+- Android Studio (para Android)
+- Una cuenta de Firebase (para pruebas reales de notificaciones)
 
+---
+
+## 🛠️ Instalación
+
+1. **Clona el repositorio:**
+   ```sh
+   git clone https://github.com/tuusuario/MyNotificationsApp.git
+   cd MyNotificationsApp
+   ```
+
+2. **Instala las dependencias:**
+   ```sh
+   yarn install
+   # o
+   npm install
+   ```
+
+3. **Instala pods para iOS:**
+   ```sh
+   cd ios && pod install && cd ..
+   ```
+
+---
+
+## 🔥 Configuración de Firebase (Obligatorio para notificaciones push)
+
+Por seguridad, los archivos de configuración **NO están incluidos** en el repo.
+
+### 1. Crea un proyecto en [Firebase Console](https://console.firebase.google.com/)
+
+### 2. Agrega una app Android y una iOS en Firebase
+
+### 3. Descarga los archivos de configuración:
+- **Android:** `google-services.json`
+- **iOS:** `GoogleService-Info.plist`
+
+### 4. Colócalos en las rutas correctas:
+- `android/app/google-services.json`
+- `ios/MyNotificationsApp/GoogleService-Info.plist`
+
+> **Nota:** Si solo quieres probar la app sin notificaciones reales, puedes omitir este paso y usar la función de "Simular notificación" en la app.
+
+---
+
+## ▶️ ¿Cómo correr la app?
+
+### **Android:**
 ```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
 yarn android
+# o
+npm run android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
+### **iOS:**
 ```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
 yarn ios
+# o
+npm run ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🧪 Funcionalidades principales
+- Recepción de notificaciones (push y simuladas)
+- Listado y detalle de notificaciones
+- Filtros por categoría, prioridad y estado
+- Distinción leídas/no leídas
+- Persistencia local
+- Arquitectura modular y profesional
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 🛡️ Seguridad
+- **No subas tus archivos de configuración de Firebase a repos públicos.**
+- `.gitignore` ya está configurado para protegerlos.
+- No hay logs de tokens ni datos sensibles en el código.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+---
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 📝 Notas
+- Si tienes problemas con dependencias nativas, prueba limpiar el proyecto:
+  ```sh
+  cd android && ./gradlew clean && cd ..
+  cd ios && pod install --repo-update && cd ..
+  ```
+- Si tienes dudas, revisa la documentación oficial de [React Native](https://reactnative.dev/) y [React Native Firebase](https://rnfirebase.io/).
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+¡Éxitos y gracias por revisar el proyecto! 🚀
