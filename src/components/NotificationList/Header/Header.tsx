@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonRow, HeaderRow, Title, HeaderButton, HeaderButtonText, HeaderButtonDanger } from './Header.styles';
+import { ButtonRow, HeaderRow, Title, HeaderButton, HeaderButtonText, HeaderButtonDanger, Badge, BadgeText } from './Header.styles';
 
 interface HeaderProps {
   showFilters: boolean;
@@ -7,6 +7,7 @@ interface HeaderProps {
   onToggleFilters: () => void;
   onClearFilters: () => void;
   hasActiveFilters: boolean;
+  unreadCount: number;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -15,10 +16,16 @@ const Header: React.FC<HeaderProps> = ({
   onToggleFilters,
   onClearFilters,
   hasActiveFilters,
+  unreadCount,
 }) => (
   <>
     <HeaderRow>
       <Title>Notificaciones</Title>
+      {unreadCount > 0 && (
+        <Badge>
+          <BadgeText>{unreadCount}</BadgeText>
+        </Badge>
+      )}
     </HeaderRow>
     <ButtonRow>
       <HeaderButton onPress={onSimulateNotification}>

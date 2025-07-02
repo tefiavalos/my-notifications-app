@@ -108,6 +108,8 @@ const NotificationList: React.FC<NotificationListProps> = () => {
     }
   };
 
+  const unreadCount = notifications.filter(n => !n.isRead).length;
+
   const renderEmptyState = () => (
     <EmptyState>
       <EmptyStateIcon>📱</EmptyStateIcon>
@@ -128,6 +130,7 @@ const NotificationList: React.FC<NotificationListProps> = () => {
         onToggleFilters={() => setShowFilters(f => !f)}
         onClearFilters={clearFilters}
         hasActiveFilters={Object.keys(filter).length > 0}
+        unreadCount={unreadCount}
       />
       {showFilters && (
         <Filters

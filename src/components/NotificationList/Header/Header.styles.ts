@@ -14,6 +14,23 @@ export const Title = styled.Text`
   color: #333333;
 `;
 
+export const Badge = styled.View`
+  background-color: #e53935;
+  border-radius: 10px;
+  min-width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  padding-horizontal: 6px;
+`;
+
+export const BadgeText = styled.Text`
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+`;
+
 export const ButtonRow = styled.View`
   flex-direction: row;
   gap: 8px;
